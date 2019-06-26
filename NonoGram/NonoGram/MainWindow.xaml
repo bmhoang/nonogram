@@ -1,0 +1,24 @@
+﻿<Window x:Class="NonoGram.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NonoGram"
+        mc:Ignorable="d"
+        Title="NonoGram" Height="600" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <local:Board x:Name="board" Background="#FFF1F1F1" Grid.Row="1" Grid.Column="1" Margin="0 0 5 5" CellSize="15"/>
+        <TextBox x:Name="textBox" Grid.Column="1" TextWrapping="Wrap" AcceptsReturn="True" AcceptsTab="True" VerticalScrollBarVisibility="Auto" Margin="0 5 5 5"/>
+        <Button x:Name="button" Content="Resolve" Grid.Row="1" Grid.Column="0" Height="90" VerticalAlignment="Top" Margin="5 0 5 0" Click="ResolveTheGame" />
+        <ListBox x:Name="listBox" Grid.Row="1" Background="Black" Margin="5 95 5 5"/>
+        <Button x:Name="button1" Content="Apply" Margin="5" Click="ApplyGame"/>
+    </Grid>
+</Window>
